@@ -10,6 +10,26 @@ $ sudo apt-get install python2.7-dev python3-dev
 $ wget https://bootstrap.pypa.io/get-pip.py
 $ sudo python get-pip.py
 $ sudo pip install numpy scipy matplotlib jupyter sympy nose
+if interested in Java and android apps then do the following steps:
+=========================================================================================
+
+if you have a 32 bit system then do this one:
+$ wget http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-arm32-vfp-hflt.tar.gz
+
+if you have a 64 bit system then you do this one:
+$ wget http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-arm64-vfp-hflt.tar.gz
+
+$ tar xvfz jdk-8u33-linux-arm-vfp-hflt.gz
+$ mkdir /usr/lib/jvm
+$ mv jdk1.8.0_33 /usr/lib/jvm/
+$ export PATH=$PATH:/usr/lib/jvm/jdk1.8.0/bin
+$ update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.8.0_33/bin/javac 1
+$ update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_33/bin/java 1
+$ update-alternatives --config javac
+$ update-alternatives --config java
+=========================================================================================
+
+
 $ cd ~
 $ wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.4.1.zip
 $ unzip opencv.zip
